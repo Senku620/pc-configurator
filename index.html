@@ -437,44 +437,6 @@
             border-color: #f59e0b;
         }
 
-        /* === INSTRUCTIONS === */
-        .instructions {
-            background: linear-gradient(135deg, rgba(124, 58, 237, 0.06), rgba(99, 102, 241, 0.06));
-            border: 1px solid var(--color-border);
-            border-radius: 16px;
-            padding: 24px;
-            margin-bottom: 32px;
-            font-size: 14px;
-            line-height: 1.7;
-            color: var(--color-text-secondary);
-        }
-
-        .instructions h3 {
-            color: var(--color-accent-purple);
-            font-size: 16px;
-            margin-bottom: 12px;
-            text-transform: none;
-            letter-spacing: 0;
-            font-weight: 700;
-        }
-
-        .instructions ol {
-            margin-left: 20px;
-        }
-
-        .instructions li {
-            margin-bottom: 8px;
-        }
-
-        .instructions code {
-            background: var(--color-bg-secondary);
-            padding: 4px 8px;
-            border-radius: 6px;
-            color: var(--color-accent-purple);
-            font-family: 'Monaco', 'Menlo', monospace;
-            font-size: 13px;
-        }
-
         /* === FOOTER === */
         .footer {
             text-align: center;
@@ -610,16 +572,6 @@
         </div>
 
         <button class="btn btn-primary btn-full" onclick="saveConfig()">💾 Сохранить сборку</button>
-
-        <!-- === INSTRUCTIONS === -->
-        <div class="instructions">
-            <h3>📖 Как запустить</h3>
-            <ol>
-                <li>Запустите Python сервер: <code>python server.py</code></li>
-                <li>Откройте <code>http://localhost:8080</code> в браузере</li>
-                <li>Для Telegram бота используйте ngrok или деплой на сервер</li>
-            </ol>
-        </div>
 
         <!-- === FOOTER === -->
         <div class="footer">
