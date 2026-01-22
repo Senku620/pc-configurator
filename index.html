@@ -51,31 +51,42 @@
         /* === HEADER === */
         .header {
             text-align: center;
-            padding: 40px 16px;
-            margin-bottom: 32px;
-            border-bottom: none;
-            background: transparent;
-            border-radius: 0;
+            padding: 32px 16px;
+            margin-bottom: 24px;
+        }
+
+        .header-logo {
+            width: 64px;
+            height: 64px;
+            margin: 0 auto 16px;
+            background: linear-gradient(135deg, var(--color-accent-purple), var(--color-accent-blue));
+            border-radius: 16px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            box-shadow: 0 8px 32px rgba(124, 58, 237, 0.3);
+        }
+
+        .header-logo svg {
+            width: 36px;
+            height: 36px;
+            fill: white;
         }
 
         .header h1 {
-            font-size: 42px;
+            font-size: 28px;
             font-weight: 700;
             background: linear-gradient(135deg, var(--color-accent-purple), var(--color-accent-blue));
             -webkit-background-clip: text;
             -webkit-text-fill-color: transparent;
             background-clip: text;
-            margin-bottom: 12px;
+            margin-bottom: 8px;
             letter-spacing: -0.5px;
-            line-height: 1.2;
         }
 
         .header p {
-            font-size: 16px;
+            font-size: 14px;
             color: var(--color-text-secondary);
-            font-weight: 400;
-            max-width: 500px;
-            margin: 0 auto;
         }
 
         /* === CONFIG SLOTS === */
@@ -90,29 +101,29 @@
         }
 
         .config-slots::-webkit-scrollbar {
-            height: 6px;
+            height: 4px;
         }
 
         .config-slots::-webkit-scrollbar-track {
             background: var(--color-bg-secondary);
-            border-radius: 3px;
+            border-radius: 2px;
         }
 
         .config-slots::-webkit-scrollbar-thumb {
             background: var(--color-accent-purple);
-            border-radius: 3px;
+            border-radius: 2px;
         }
 
         .config-slot {
-            min-width: 90px;
-            padding: 12px 16px;
+            min-width: 80px;
+            padding: 12px 14px;
             background: var(--color-bg-secondary);
             border: 2px solid var(--color-border);
-            border-radius: 10px;
+            border-radius: 12px;
             cursor: pointer;
             transition: all 0.3s ease;
             text-align: center;
-            font-size: 12px;
+            font-size: 11px;
             font-weight: 600;
             color: var(--color-text-secondary);
             flex-shrink: 0;
@@ -124,7 +135,7 @@
 
         .config-slot.active {
             background: linear-gradient(135deg, var(--color-accent-purple), var(--color-accent-blue));
-            border-color: var(--color-accent-purple);
+            border-color: transparent;
             color: white;
         }
 
@@ -154,49 +165,121 @@
         /* === STATS CARDS === */
         .stats-grid {
             display: grid;
-            grid-template-columns: repeat(3, 1fr);
-            gap: 16px;
-            margin-bottom: 24px;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 12px;
+            margin-bottom: 20px;
         }
 
         .stat-card {
             background: var(--color-bg-secondary);
             border: 1px solid var(--color-border);
-            border-radius: 12px;
-            padding: 24px 16px;
+            border-radius: 14px;
+            padding: 16px;
             text-align: center;
-            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
             transition: all 0.3s ease;
         }
 
         .stat-card:hover {
             border-color: var(--color-accent-purple);
-            box-shadow: 0 4px 16px rgba(124, 58, 237, 0.1);
             transform: translateY(-2px);
         }
 
+        .stat-card .icon {
+            width: 40px;
+            height: 40px;
+            margin: 0 auto 10px;
+            background: rgba(124, 58, 237, 0.15);
+            border-radius: 10px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .stat-card .icon svg {
+            width: 20px;
+            height: 20px;
+            fill: var(--color-accent-purple);
+        }
+
         .stat-card .label {
-            font-size: 12px;
+            font-size: 11px;
             color: var(--color-text-secondary);
             text-transform: uppercase;
-            letter-spacing: 0.8px;
-            margin-bottom: 8px;
-            font-weight: 500;
+            letter-spacing: 0.5px;
+            margin-bottom: 4px;
         }
 
         .stat-card .value {
-            font-size: 24px;
+            font-size: 20px;
             font-weight: 700;
             color: var(--color-accent-purple);
         }
 
-        /* === COMPATIBILITY WARNINGS === */
+        /* === POWER INDICATOR === */
+        .power-indicator {
+            background: var(--color-bg-secondary);
+            border: 1px solid var(--color-border);
+            border-radius: 14px;
+            padding: 16px;
+            margin-bottom: 20px;
+        }
+
+        .power-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 10px;
+        }
+
+        .power-label {
+            font-size: 13px;
+            color: var(--color-text-secondary);
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+
+        .power-label svg {
+            width: 18px;
+            height: 18px;
+            fill: var(--color-accent-orange);
+        }
+
+        .power-value {
+            font-size: 14px;
+            font-weight: 700;
+            color: var(--color-accent-purple);
+        }
+
+        .power-bar {
+            height: 8px;
+            background: var(--color-bg-card);
+            border-radius: 4px;
+            overflow: hidden;
+        }
+
+        .power-fill {
+            height: 100%;
+            border-radius: 4px;
+            transition: all 0.5s ease;
+            background: linear-gradient(90deg, var(--color-accent-green), var(--color-accent-cyan));
+        }
+
+        .power-fill.warning {
+            background: linear-gradient(90deg, var(--color-accent-orange), #fbbf24);
+        }
+
+        .power-fill.danger {
+            background: linear-gradient(90deg, var(--color-accent-red), #f87171);
+        }
+
+        /* === COMPATIBILITY PANEL === */
         .compatibility-panel {
             background: var(--color-bg-secondary);
             border: 2px solid var(--color-border);
-            border-radius: 12px;
+            border-radius: 14px;
             padding: 16px;
-            margin-bottom: 24px;
+            margin-bottom: 20px;
             display: none;
         }
 
@@ -228,17 +311,28 @@
             gap: 8px;
         }
 
+        .compatibility-title svg {
+            width: 18px;
+            height: 18px;
+        }
+
         .compatibility-title.error {
             color: var(--color-accent-red);
         }
+
+        .compatibility-title.error svg { fill: var(--color-accent-red); }
 
         .compatibility-title.warning {
             color: var(--color-accent-orange);
         }
 
+        .compatibility-title.warning svg { fill: var(--color-accent-orange); }
+
         .compatibility-title.success {
             color: var(--color-accent-green);
         }
+
+        .compatibility-title.success svg { fill: var(--color-accent-green); }
 
         .compatibility-item {
             font-size: 13px;
@@ -251,109 +345,62 @@
 
         .compatibility-item:last-child {
             border-bottom: none;
-            padding-bottom: 0;
-        }
-
-        .compatibility-icon {
-            flex-shrink: 0;
         }
 
         .compatibility-text {
             color: var(--color-text-secondary);
         }
 
-        /* === POWER INDICATOR === */
-        .power-indicator {
-            background: var(--color-bg-secondary);
-            border: 1px solid var(--color-border);
-            border-radius: 12px;
-            padding: 16px;
-            margin-bottom: 24px;
-        }
-
-        .power-header {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            margin-bottom: 12px;
-        }
-
-        .power-label {
-            font-size: 13px;
-            color: var(--color-text-secondary);
-            font-weight: 500;
-        }
-
-        .power-value {
-            font-size: 15px;
-            font-weight: 700;
-            color: var(--color-accent-purple);
-        }
-
-        .power-bar {
-            height: 8px;
-            background: var(--color-bg-card);
-            border-radius: 4px;
-            overflow: hidden;
-        }
-
-        .power-fill {
-            height: 100%;
-            border-radius: 4px;
-            transition: all 0.5s ease;
-            background: var(--color-accent-green);
-        }
-
-        .power-fill.warning {
-            background: var(--color-accent-orange);
-        }
-
-        .power-fill.danger {
-            background: var(--color-accent-red);
-        }
-
         /* === CATEGORIES === */
-        .categories-title {
-            font-size: 18px;
+        .section-title {
+            font-size: 16px;
             font-weight: 600;
-            margin-bottom: 20px;
+            margin-bottom: 16px;
             color: var(--color-text-primary);
-            text-transform: none;
-            letter-spacing: 0;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+
+        .section-title svg {
+            width: 20px;
+            height: 20px;
+            fill: var(--color-accent-purple);
         }
 
         .categories-grid {
             display: grid;
             grid-template-columns: repeat(2, 1fr);
-            gap: 12px;
-            margin-bottom: 40px;
+            gap: 10px;
+            margin-bottom: 24px;
         }
 
         .category-btn {
             background: var(--color-bg-secondary);
             border: 2px solid var(--color-border);
-            border-radius: 12px;
-            padding: 20px;
+            border-radius: 14px;
+            padding: 16px 12px;
             cursor: pointer;
             transition: all 0.3s ease;
             text-align: center;
-            font-size: 14px;
+            font-size: 13px;
             font-weight: 600;
             color: var(--color-text-primary);
             position: relative;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 8px;
         }
 
         .category-btn:hover {
             border-color: var(--color-accent-purple);
-            box-shadow: 0 4px 16px rgba(124, 58, 237, 0.12);
             transform: translateY(-2px);
         }
 
         .category-btn.active {
-            background: linear-gradient(135deg, var(--color-accent-purple), var(--color-accent-blue));
+            background: linear-gradient(135deg, rgba(124, 58, 237, 0.15), rgba(99, 102, 241, 0.15));
             border-color: var(--color-accent-purple);
-            box-shadow: 0 4px 16px rgba(124, 58, 237, 0.25);
-            color: white;
         }
 
         .category-btn.incompatible {
@@ -361,17 +408,60 @@
         }
 
         .category-btn.incompatible::after {
-            content: '⚠️';
+            content: '!';
             position: absolute;
             top: 8px;
             right: 8px;
-            font-size: 14px;
+            width: 18px;
+            height: 18px;
+            background: var(--color-accent-red);
+            color: white;
+            border-radius: 50%;
+            font-size: 11px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: 700;
         }
 
-        .category-emoji {
-            font-size: 24px;
-            display: block;
-            margin-bottom: 8px;
+        .category-icon {
+            width: 44px;
+            height: 44px;
+            background: rgba(124, 58, 237, 0.12);
+            border-radius: 12px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            transition: all 0.3s ease;
+        }
+
+        .category-btn.active .category-icon {
+            background: var(--color-accent-purple);
+        }
+
+        .category-icon svg {
+            width: 24px;
+            height: 24px;
+            fill: var(--color-accent-purple);
+            transition: all 0.3s ease;
+        }
+
+        .category-btn.active .category-icon svg {
+            fill: white;
+        }
+
+        .category-name {
+            font-size: 12px;
+            font-weight: 600;
+        }
+
+        .category-selected {
+            font-size: 10px;
+            color: var(--color-accent-green);
+            max-width: 100%;
+            overflow: hidden;
+            text-overflow: ellipsis;
+            white-space: nowrap;
         }
 
         /* === COMPONENTS MODAL === */
@@ -382,10 +472,10 @@
             left: 0;
             width: 100%;
             height: 100%;
-            background: rgba(0, 0, 0, 0.8);
+            background: rgba(0, 0, 0, 0.85);
             backdrop-filter: blur(8px);
             z-index: 1000;
-            animation: fadeIn 0.3s ease;
+            animation: fadeIn 0.2s ease;
         }
 
         .modal-overlay.active {
@@ -396,9 +486,9 @@
         .modal-content {
             background: var(--color-bg-primary);
             width: 100%;
-            border-radius: 20px 20px 0 0;
+            border-radius: 24px 24px 0 0;
             padding: 24px;
-            max-height: 80vh;
+            max-height: 85vh;
             overflow-y: auto;
             animation: slideUp 0.3s ease;
         }
@@ -414,7 +504,6 @@
             font-size: 28px;
             cursor: pointer;
             color: var(--color-text-secondary);
-            font-weight: 300;
             background: none;
             border: none;
             padding: 4px 8px;
@@ -426,17 +515,26 @@
         }
 
         .modal-title {
-            font-size: 24px;
+            font-size: 20px;
             font-weight: 700;
             color: var(--color-text-primary);
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .modal-title svg {
+            width: 24px;
+            height: 24px;
+            fill: var(--color-accent-purple);
         }
 
         .component-item {
             background: var(--color-bg-secondary);
             border: 2px solid var(--color-border);
-            border-radius: 12px;
+            border-radius: 14px;
             padding: 16px;
-            margin-bottom: 12px;
+            margin-bottom: 10px;
             cursor: pointer;
             display: flex;
             justify-content: space-between;
@@ -448,13 +546,11 @@
         .component-item:hover {
             border-color: var(--color-accent-purple);
             background: rgba(124, 58, 237, 0.05);
-            box-shadow: 0 2px 8px rgba(124, 58, 237, 0.08);
         }
 
         .component-item.selected {
             border-color: var(--color-accent-purple);
-            background: rgba(124, 58, 237, 0.08);
-            box-shadow: 0 2px 12px rgba(124, 58, 237, 0.15);
+            background: rgba(124, 58, 237, 0.1);
         }
 
         .component-item.incompatible {
@@ -464,9 +560,9 @@
         }
 
         .component-item.incompatible::before {
-            content: '⚠️ Несовместимо';
+            content: 'Несовместимо';
             position: absolute;
-            top: -10px;
+            top: -8px;
             right: 12px;
             background: var(--color-accent-red);
             color: white;
@@ -482,13 +578,13 @@
 
         .component-name {
             font-weight: 600;
-            font-size: 15px;
+            font-size: 14px;
             color: var(--color-text-primary);
             margin-bottom: 4px;
         }
 
         .component-specs {
-            font-size: 13px;
+            font-size: 12px;
             color: var(--color-text-secondary);
         }
 
@@ -514,83 +610,151 @@
             display: flex;
             align-items: center;
             justify-content: center;
-            color: white;
-            font-weight: bold;
-            font-size: 14px;
+        }
+
+        .checkmark svg {
+            width: 14px;
+            height: 14px;
+            fill: white;
         }
 
         /* === BUILD SUMMARY === */
         .build-summary {
             background: linear-gradient(135deg, rgba(124, 58, 237, 0.08), rgba(99, 102, 241, 0.08));
             border: 2px solid var(--color-border);
-            border-radius: 16px;
-            padding: 24px;
-            margin-bottom: 32px;
-            box-shadow: 0 2px 8px rgba(124, 58, 237, 0.08);
+            border-radius: 18px;
+            padding: 20px;
+            margin-bottom: 24px;
+        }
+
+        .build-summary-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 16px;
         }
 
         .build-summary-title {
-            font-size: 13px;
+            font-size: 14px;
             font-weight: 700;
-            text-transform: uppercase;
-            letter-spacing: 1.2px;
             color: var(--color-accent-purple);
-            margin-bottom: 16px;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+
+        .build-summary-title svg {
+            width: 18px;
+            height: 18px;
+            fill: var(--color-accent-purple);
+        }
+
+        .build-copy-btn {
+            background: rgba(124, 58, 237, 0.15);
+            border: none;
+            border-radius: 8px;
+            padding: 8px 12px;
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+            gap: 6px;
+            font-size: 12px;
+            font-weight: 600;
+            color: var(--color-accent-purple);
+            transition: all 0.2s ease;
+        }
+
+        .build-copy-btn:hover {
+            background: rgba(124, 58, 237, 0.25);
+        }
+
+        .build-copy-btn svg {
+            width: 14px;
+            height: 14px;
+            fill: var(--color-accent-purple);
         }
 
         .build-item {
             display: flex;
             justify-content: space-between;
             align-items: center;
-            padding: 12px 0;
+            padding: 10px 0;
             border-bottom: 1px solid rgba(124, 58, 237, 0.1);
-            font-size: 14px;
+            font-size: 13px;
         }
 
         .build-item:last-child {
             border-bottom: none;
-            padding-top: 12px;
-            padding-bottom: 0;
+        }
+
+        .build-item-left {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            flex: 1;
+            min-width: 0;
+        }
+
+        .build-item-icon {
+            width: 32px;
+            height: 32px;
+            background: rgba(124, 58, 237, 0.1);
+            border-radius: 8px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-shrink: 0;
+        }
+
+        .build-item-icon svg {
+            width: 16px;
+            height: 16px;
+            fill: var(--color-accent-purple);
+        }
+
+        .build-item-info {
+            min-width: 0;
+            flex: 1;
         }
 
         .build-item-label {
             color: var(--color-text-secondary);
-            font-weight: 500;
+            font-size: 11px;
         }
 
         .build-item-value {
             color: var(--color-text-primary);
-            font-weight: 600;
-            text-align: right;
-            flex: 1;
-            margin-left: 12px;
+            font-weight: 500;
+            font-size: 13px;
+            white-space: nowrap;
+            overflow: hidden;
+            text-overflow: ellipsis;
         }
 
         .build-item-price {
             color: var(--color-accent-purple);
             font-weight: 600;
-            margin-left: 12px;
-            min-width: 90px;
-            text-align: right;
+            margin-left: 10px;
+            white-space: nowrap;
         }
 
         .build-total {
             margin-top: 16px;
             padding-top: 16px;
-            border-top: 2px solid rgba(124, 58, 237, 0.2);
+            border-top: 2px solid rgba(124, 58, 237, 0.15);
             display: flex;
             justify-content: space-between;
             align-items: center;
         }
 
         .build-total-label {
-            font-size: 16px;
+            font-size: 15px;
             font-weight: 700;
             color: var(--color-text-primary);
         }
 
         .build-total-price {
-            font-size: 24px;
+            font-size: 22px;
             font-weight: 700;
             background: linear-gradient(135deg, var(--color-accent-purple), var(--color-accent-blue));
             -webkit-background-clip: text;
@@ -598,40 +762,52 @@
             background-clip: text;
         }
 
+        .build-empty {
+            color: var(--color-text-secondary);
+            text-align: center;
+            padding: 24px;
+            font-size: 14px;
+        }
+
         /* === BUTTONS === */
         .btn-group {
             display: grid;
             grid-template-columns: 1fr 1fr;
-            gap: 12px;
-            margin-bottom: 16px;
+            gap: 10px;
+            margin-bottom: 12px;
         }
 
         .btn {
-            padding: 16px 20px;
+            padding: 14px 16px;
             border: none;
             border-radius: 12px;
-            font-size: 15px;
+            font-size: 14px;
             font-weight: 600;
             cursor: pointer;
-            text-transform: none;
-            letter-spacing: 0;
             transition: all 0.3s ease;
             font-family: var(--font-main);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 8px;
+        }
+
+        .btn svg {
+            width: 18px;
+            height: 18px;
         }
 
         .btn-primary {
             background: linear-gradient(135deg, var(--color-accent-purple), var(--color-accent-blue));
             color: white;
-            box-shadow: 0 4px 16px rgba(124, 58, 237, 0.2);
+            box-shadow: 0 4px 16px rgba(124, 58, 237, 0.25);
         }
+
+        .btn-primary svg { fill: white; }
 
         .btn-primary:hover {
             transform: translateY(-2px);
-            box-shadow: 0 6px 24px rgba(124, 58, 237, 0.3);
-        }
-
-        .btn-primary:active {
-            transform: translateY(0);
+            box-shadow: 0 6px 24px rgba(124, 58, 237, 0.35);
         }
 
         .btn-secondary {
@@ -640,9 +816,10 @@
             border: 2px solid var(--color-accent-purple);
         }
 
+        .btn-secondary svg { fill: var(--color-accent-purple); }
+
         .btn-secondary:hover {
-            background: rgba(124, 58, 237, 0.08);
-            box-shadow: 0 2px 8px rgba(124, 58, 237, 0.1);
+            background: rgba(124, 58, 237, 0.1);
         }
 
         .btn-danger {
@@ -651,8 +828,10 @@
             border: 2px solid var(--color-accent-red);
         }
 
+        .btn-danger svg { fill: var(--color-accent-red); }
+
         .btn-danger:hover {
-            background: rgba(239, 68, 68, 0.08);
+            background: rgba(239, 68, 68, 0.1);
         }
 
         .btn-full {
@@ -668,11 +847,11 @@
             background: var(--color-bg-card);
             border: 1px solid var(--color-border);
             color: var(--color-text-primary);
-            padding: 16px 24px;
+            padding: 14px 20px;
             border-radius: 12px;
             font-size: 14px;
             font-weight: 500;
-            box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3);
+            box-shadow: 0 8px 32px rgba(0, 0, 0, 0.4);
             z-index: 2000;
             opacity: 0;
             transition: all 0.3s ease;
@@ -685,31 +864,18 @@
             opacity: 1;
         }
 
-        .toast.success {
-            border-color: var(--color-accent-green);
-        }
-
-        .toast.warning {
-            border-color: #f59e0b;
-        }
-
-        .toast.error {
-            border-color: var(--color-accent-red);
-        }
+        .toast.success { border-color: var(--color-accent-green); }
+        .toast.warning { border-color: var(--color-accent-orange); }
+        .toast.error { border-color: var(--color-accent-red); }
 
         /* === FOOTER === */
         .footer {
             text-align: center;
-            padding: 24px;
+            padding: 20px;
             color: var(--color-text-secondary);
             font-size: 12px;
             border-top: 1px solid var(--color-border);
-            margin-top: 32px;
-        }
-
-        .footer a {
-            color: var(--color-accent-purple);
-            text-decoration: none;
+            margin-top: 24px;
         }
 
         /* === ANIMATIONS === */
@@ -723,93 +889,58 @@
             to { transform: translateY(0); }
         }
 
-        @keyframes pulse {
-            0%, 100% { transform: scale(1); }
-            50% { transform: scale(1.05); }
-        }
-
-        @keyframes shake {
-            0%, 100% { transform: translateX(0); }
-            25% { transform: translateX(-5px); }
-            75% { transform: translateX(5px); }
-        }
-
-        .shake {
-            animation: shake 0.3s ease;
-        }
-
         /* === RESPONSIVE === */
-        @media (max-width: 480px) {
-            .stats-grid {
-                grid-template-columns: 1fr;
-            }
-
-            .categories-grid {
-                grid-template-columns: 1fr;
-            }
-
-            .header h1 {
-                font-size: 28px;
-            }
-
-            .btn-group {
-                grid-template-columns: 1fr;
-            }
-
-            .btn-full {
-                grid-column: auto;
-            }
-
-            .config-slot {
-                min-width: 70px;
-                padding: 10px 12px;
-            }
+        @media (max-width: 360px) {
+            .categories-grid { grid-template-columns: 1fr; }
+            .btn-group { grid-template-columns: 1fr; }
+            .stats-grid { grid-template-columns: 1fr; }
         }
 
         @media (min-width: 768px) {
-            .container {
-                max-width: 600px;
-            }
-
-            .categories-grid {
-                grid-template-columns: repeat(4, 1fr);
-            }
+            .container { max-width: 600px; }
+            .categories-grid { grid-template-columns: repeat(4, 1fr); }
         }
     </style>
 </head>
 <body>
-    <!-- === HEADER === -->
     <div class="container">
+        <!-- === HEADER === -->
         <div class="header">
-            <h1>🖥️ ПК КОНФИГУРАТОР</h1>
-            <p>Собери свой идеальный компьютер с проверкой совместимости!</p>
+            <div class="header-logo">
+                <svg viewBox="0 0 24 24"><path d="M20 18c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2H4c-1.1 0-2 .9-2 2v10c0 1.1.9 2 2 2H0v2h24v-2h-4zM4 6h16v10H4V6z"/></svg>
+            </div>
+            <h1>ПК Конфигуратор</h1>
+            <p>Собери свой идеальный компьютер</p>
         </div>
 
         <!-- === CONFIG SLOTS === -->
-        <div class="config-slots" id="configSlots">
-            <!-- Генерируется динамически -->
-        </div>
+        <div class="config-slots" id="configSlots"></div>
 
         <!-- === STATS === -->
         <div class="stats-grid">
             <div class="stat-card">
+                <div class="icon">
+                    <svg viewBox="0 0 24 24"><path d="M4 6H2v14c0 1.1.9 2 2 2h14v-2H4V6zm16-4H8c-1.1 0-2 .9-2 2v12c0 1.1.9 2 2 2h12c1.1 0 2-.9 2-2V4c0-1.1-.9-2-2-2zm-1 9h-4v4h-2v-4H9V9h4V5h2v4h4v2z"/></svg>
+                </div>
                 <div class="label">Компоненты</div>
                 <div class="value" id="componentCount">0/8</div>
             </div>
             <div class="stat-card">
+                <div class="icon">
+                    <svg viewBox="0 0 24 24"><path d="M11.8 10.9c-2.27-.59-3-1.2-3-2.15 0-1.09 1.01-1.85 2.7-1.85 1.78 0 2.44.85 2.5 2.1h2.21c-.07-1.72-1.12-3.3-3.21-3.81V3h-3v2.16c-1.94.42-3.5 1.68-3.5 3.61 0 2.31 1.91 3.46 4.7 4.13 2.5.6 3 1.48 3 2.41 0 .69-.49 1.79-2.7 1.79-2.06 0-2.87-.92-2.98-2.1h-2.2c.12 2.19 1.76 3.42 3.68 3.83V21h3v-2.15c1.95-.37 3.5-1.5 3.5-3.55 0-2.84-2.43-3.81-4.7-4.4z"/></svg>
+                </div>
                 <div class="label">Цена</div>
                 <div class="value" id="totalPrice">0 ₽</div>
-            </div>
-            <div class="stat-card">
-                <div class="label">Производительность</div>
-                <div class="value" id="perfScore">0%</div>
             </div>
         </div>
 
         <!-- === POWER INDICATOR === -->
         <div class="power-indicator" id="powerIndicator">
             <div class="power-header">
-                <span class="power-label">⚡ Потребление / Мощность БП</span>
+                <span class="power-label">
+                    <svg viewBox="0 0 24 24"><path d="M11 21h-1l1-7H7.5c-.58 0-.57-.32-.38-.66.19-.34.05-.08.07-.12C8.48 10.94 10.42 7.54 13 3h1l-1 7h3.5c.49 0 .56.33.47.51l-.07.15C12.96 17.55 11 21 11 21z"/></svg>
+                    Потребление / БП
+                </span>
                 <span class="power-value" id="powerValue">0W / 0W</span>
             </div>
             <div class="power-bar">
@@ -820,67 +951,57 @@
         <!-- === COMPATIBILITY PANEL === -->
         <div class="compatibility-panel" id="compatibilityPanel">
             <div class="compatibility-title" id="compatibilityTitle">
-                <span>⚠️</span> Проверка совместимости
+                <svg viewBox="0 0 24 24"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 15l-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z"/></svg>
+                Проверка совместимости
             </div>
             <div id="compatibilityList"></div>
         </div>
 
         <!-- === CATEGORIES === -->
-        <div class="categories-title">Выбери компоненты</div>
-        <div class="categories-grid">
-            <button class="category-btn" onclick="openCategory('cpu')" id="btn-cpu">
-                <span class="category-emoji">⚙️</span>
-                Процессор
-            </button>
-            <button class="category-btn" onclick="openCategory('motherboard')" id="btn-motherboard">
-                <span class="category-emoji">🔌</span>
-                Мат. плата
-            </button>
-            <button class="category-btn" onclick="openCategory('gpu')" id="btn-gpu">
-                <span class="category-emoji">🎮</span>
-                Видеокарта
-            </button>
-            <button class="category-btn" onclick="openCategory('ram')" id="btn-ram">
-                <span class="category-emoji">💾</span>
-                Оперативка
-            </button>
-            <button class="category-btn" onclick="openCategory('storage')" id="btn-storage">
-                <span class="category-emoji">📦</span>
-                Хранилище
-            </button>
-            <button class="category-btn" onclick="openCategory('cooling')" id="btn-cooling">
-                <span class="category-emoji">❄️</span>
-                Охлаждение
-            </button>
-            <button class="category-btn" onclick="openCategory('psu')" id="btn-psu">
-                <span class="category-emoji">⚡</span>
-                Блок питания
-            </button>
-            <button class="category-btn" onclick="openCategory('case')" id="btn-case">
-                <span class="category-emoji">🏠</span>
-                Корпус
-            </button>
+        <div class="section-title">
+            <svg viewBox="0 0 24 24"><path d="M4 8h4V4H4v4zm6 12h4v-4h-4v4zm-6 0h4v-4H4v4zm0-6h4v-4H4v4zm6 0h4v-4h-4v4zm6-10v4h4V4h-4zm-6 4h4V4h-4v4zm6 6h4v-4h-4v4zm0 6h4v-4h-4v4z"/></svg>
+            Компоненты
         </div>
+        <div class="categories-grid" id="categoriesGrid"></div>
 
         <!-- === BUILD SUMMARY === -->
         <div class="build-summary">
-            <div class="build-summary-title">Твой конфиг #<span id="currentConfigNum">1</span></div>
-            <div id="buildSummaryContent">
-                <div style="color: var(--color-text-secondary); text-align: center; padding: 20px;">
-                    Выбери компоненты чтобы увидеть сборку
+            <div class="build-summary-header">
+                <div class="build-summary-title">
+                    <svg viewBox="0 0 24 24"><path d="M19 3H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2zm-5 14H7v-2h7v2zm3-4H7v-2h10v2zm0-4H7V7h10v2z"/></svg>
+                    Сборка #<span id="currentConfigNum">1</span>
                 </div>
+                <button class="build-copy-btn" onclick="copyBuildToClipboard()">
+                    <svg viewBox="0 0 24 24"><path d="M16 1H4c-1.1 0-2 .9-2 2v14h2V3h12V1zm3 4H8c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h11c1.1 0 2-.9 2-2V7c0-1.1-.9-2-2-2zm0 16H8V7h11v14z"/></svg>
+                    Копировать
+                </button>
+            </div>
+            <div id="buildSummaryContent">
+                <div class="build-empty">Выбери компоненты чтобы увидеть сборку</div>
             </div>
         </div>
 
         <!-- === BUTTONS === -->
         <div class="btn-group">
-            <button class="btn btn-primary" onclick="shareConfig()">📤 Поделиться</button>
-            <button class="btn btn-secondary" onclick="resetConfig()">🔄 Сброс</button>
+            <button class="btn btn-primary" onclick="shareConfig()">
+                <svg viewBox="0 0 24 24"><path d="M18 16.08c-.76 0-1.44.3-1.96.77L8.91 12.7c.05-.23.09-.46.09-.7s-.04-.47-.09-.7l7.05-4.11c.54.5 1.25.81 2.04.81 1.66 0 3-1.34 3-3s-1.34-3-3-3-3 1.34-3 3c0 .24.04.47.09.7L8.04 9.81C7.5 9.31 6.79 9 6 9c-1.66 0-3 1.34-3 3s1.34 3 3 3c.79 0 1.5-.31 2.04-.81l7.12 4.16c-.05.21-.08.43-.08.65 0 1.61 1.31 2.92 2.92 2.92s2.92-1.31 2.92-2.92-1.31-2.92-2.92-2.92z"/></svg>
+                Поделиться
+            </button>
+            <button class="btn btn-secondary" onclick="resetConfig()">
+                <svg viewBox="0 0 24 24"><path d="M17.65 6.35C16.2 4.9 14.21 4 12 4c-4.42 0-7.99 3.58-7.99 8s3.57 8 7.99 8c3.73 0 6.84-2.55 7.73-6h-2.08c-.82 2.33-3.04 4-5.65 4-3.31 0-6-2.69-6-6s2.69-6 6-6c1.66 0 3.14.69 4.22 1.78L13 11h7V4l-2.35 2.35z"/></svg>
+                Сброс
+            </button>
         </div>
 
         <div class="btn-group">
-            <button class="btn btn-primary" onclick="saveConfig()">💾 Сохранить</button>
-            <button class="btn btn-danger" onclick="deleteCurrentConfig()">🗑️ Удалить</button>
+            <button class="btn btn-primary" onclick="saveConfig()">
+                <svg viewBox="0 0 24 24"><path d="M17 3H5c-1.11 0-2 .9-2 2v14c0 1.1.89 2 2 2h14c1.1 0 2-.9 2-2V7l-4-4zm-5 16c-1.66 0-3-1.34-3-3s1.34-3 3-3 3 1.34 3 3-1.34 3-3 3zm3-10H5V5h10v4z"/></svg>
+                Сохранить
+            </button>
+            <button class="btn btn-danger" onclick="deleteCurrentConfig()">
+                <svg viewBox="0 0 24 24"><path d="M6 19c0 1.1.9 2 2 2h8c1.1 0 2-.9 2-2V7H6v12zM19 4h-3.5l-1-1h-5l-1 1H5v2h14V4z"/></svg>
+                Удалить
+            </button>
         </div>
 
         <!-- === FOOTER === -->
@@ -904,125 +1025,84 @@
     <div class="toast" id="toast"></div>
 
     <script>
+        // === SVG ICONS ===
+        const icons = {
+            cpu: '<svg viewBox="0 0 24 24"><path d="M15 9H9v6h6V9zm-2 4h-2v-2h2v2zm8-2V9h-2V7c0-1.1-.9-2-2-2h-2V3h-2v2h-2V3H9v2H7c-1.1 0-2 .9-2 2v2H3v2h2v2H3v2h2v2c0 1.1.9 2 2 2h2v2h2v-2h2v2h2v-2h2c1.1 0 2-.9 2-2v-2h2v-2h-2v-2h2zm-4 6H7V7h10v10z"/></svg>',
+            motherboard: '<svg viewBox="0 0 24 24"><path d="M20 2H4c-1.1 0-2 .9-2 2v16c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V4c0-1.1-.9-2-2-2zM8 20H4v-4h4v4zm0-6H4v-4h4v4zm0-6H4V4h4v4zm6 12h-4v-4h4v4zm0-6h-4v-4h4v4zm0-6h-4V4h4v4zm6 12h-4v-4h4v4zm0-6h-4v-4h4v4zm0-6h-4V4h4v4z"/></svg>',
+            gpu: '<svg viewBox="0 0 24 24"><path d="M20 4H4c-1.11 0-1.99.89-1.99 2L2 18c0 1.11.89 2 2 2h16c1.11 0 2-.89 2-2V6c0-1.11-.89-2-2-2zm-8 11.5c-2.49 0-4.5-2.01-4.5-4.5S9.51 6.5 12 6.5s4.5 2.01 4.5 4.5-2.01 4.5-4.5 4.5zm0-7c-1.38 0-2.5 1.12-2.5 2.5s1.12 2.5 2.5 2.5 2.5-1.12 2.5-2.5-1.12-2.5-2.5-2.5z"/></svg>',
+            ram: '<svg viewBox="0 0 24 24"><path d="M2 7v10h20V7H2zm18 8H4V9h16v6zM6 11h2v2H6zm3 0h2v2H9zm3 0h2v2h-2zm3 0h2v2h-2z"/></svg>',
+            storage: '<svg viewBox="0 0 24 24"><path d="M20 6H12L10 4H4c-1.1 0-1.99.9-1.99 2L2 18c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V8c0-1.1-.9-2-2-2zm0 12H4V8h16v10z"/></svg>',
+            cooling: '<svg viewBox="0 0 24 24"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-1 17.93c-3.95-.49-7-3.85-7-7.93 0-.62.08-1.21.21-1.79L9 15v1c0 1.1.9 2 2 2v1.93zm6.9-2.54c-.26-.81-1-1.39-1.9-1.39h-1v-3c0-.55-.45-1-1-1H8v-2h2c.55 0 1-.45 1-1V7h2c1.1 0 2-.9 2-2v-.41c2.93 1.19 5 4.06 5 7.41 0 2.08-.8 3.97-2.1 5.39z"/></svg>',
+            psu: '<svg viewBox="0 0 24 24"><path d="M11 21h-1l1-7H7.5c-.58 0-.57-.32-.38-.66.19-.34.05-.08.07-.12C8.48 10.94 10.42 7.54 13 3h1l-1 7h3.5c.49 0 .56.33.47.51l-.07.15C12.96 17.55 11 21 11 21z"/></svg>',
+            case: '<svg viewBox="0 0 24 24"><path d="M18 2H6c-1.1 0-2 .9-2 2v16c0 1.1.9 2 2 2h12c1.1 0 2-.9 2-2V4c0-1.1-.9-2-2-2zM9 4h2v4H9V4zm-3 6h12v10H6V10zm3-1H6V4h3v5zm9-5v5h-3V4h3z"/></svg>',
+            check: '<svg viewBox="0 0 24 24"><path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z"/></svg>',
+            error: '<svg viewBox="0 0 24 24"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm1 15h-2v-2h2v2zm0-4h-2V7h2v6z"/></svg>',
+            warning: '<svg viewBox="0 0 24 24"><path d="M1 21h22L12 2 1 21zm12-3h-2v-2h2v2zm0-4h-2v-4h2v4z"/></svg>',
+            success: '<svg viewBox="0 0 24 24"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 15l-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z"/></svg>'
+        };
+
         // === CONSTANTS ===
         const MAX_CONFIGS = 10;
         const TOTAL_COMPONENTS = 8;
-
-        // === DATA ===
-        const components = {
-            cpu: [
-                { id: 'intel-i5-13600k', name: 'Intel Core i5-13600K', specs: '14 ядер, 3.5-5.1 GHz', price: 25000, perf: 85, socket: 'LGA1700', tdp: 125, memoryType: 'DDR4/DDR5' },
-                { id: 'intel-i7-13700k', name: 'Intel Core i7-13700K', specs: '16 ядер, 3.4-5.4 GHz', price: 35000, perf: 95, socket: 'LGA1700', tdp: 125, memoryType: 'DDR4/DDR5' },
-                { id: 'intel-i9-14900k', name: 'Intel Core i9-14900K', specs: '24 ядра, 3.2-6.0 GHz', price: 55000, perf: 100, socket: 'LGA1700', tdp: 253, memoryType: 'DDR4/DDR5' },
-                { id: 'amd-5800x3d', name: 'AMD Ryzen 7 5800X3D', specs: '8 ядер, 96MB 3D V-Cache', price: 28000, perf: 90, socket: 'AM4', tdp: 105, memoryType: 'DDR4' },
-                { id: 'amd-7700x', name: 'AMD Ryzen 7 7700X', specs: '8 ядер, 4.5-5.4 GHz', price: 30000, perf: 92, socket: 'AM5', tdp: 105, memoryType: 'DDR5' },
-                { id: 'amd-7950x3d', name: 'AMD Ryzen 9 7950X3D', specs: '16 ядер, 128MB 3D V-Cache', price: 60000, perf: 99, socket: 'AM5', tdp: 120, memoryType: 'DDR5' },
-            ],
-            motherboard: [
-                { id: 'asus-z790', name: 'ASUS ROG Strix Z790-E', specs: 'ATX, DDR5, PCIe 5.0', price: 45000, perf: 95, socket: 'LGA1700', memoryType: 'DDR5', formFactor: 'ATX' },
-                { id: 'msi-z790', name: 'MSI MAG Z790 Tomahawk', specs: 'ATX, DDR5, Wi-Fi 6E', price: 32000, perf: 90, socket: 'LGA1700', memoryType: 'DDR5', formFactor: 'ATX' },
-                { id: 'gigabyte-b660', name: 'Gigabyte B660M DS3H', specs: 'mATX, DDR4, PCIe 4.0', price: 12000, perf: 70, socket: 'LGA1700', memoryType: 'DDR4', formFactor: 'mATX' },
-                { id: 'asus-b550', name: 'ASUS TUF Gaming B550-PLUS', specs: 'ATX, DDR4, PCIe 4.0', price: 15000, perf: 75, socket: 'AM4', memoryType: 'DDR4', formFactor: 'ATX' },
-                { id: 'msi-b550', name: 'MSI MAG B550 Tomahawk', specs: 'ATX, DDR4, 2.5G LAN', price: 18000, perf: 78, socket: 'AM4', memoryType: 'DDR4', formFactor: 'ATX' },
-                { id: 'asus-x670e', name: 'ASUS ROG Crosshair X670E', specs: 'ATX, DDR5, PCIe 5.0', price: 55000, perf: 98, socket: 'AM5', memoryType: 'DDR5', formFactor: 'ATX' },
-                { id: 'msi-b650', name: 'MSI MAG B650 Tomahawk', specs: 'ATX, DDR5, Wi-Fi 6E', price: 25000, perf: 85, socket: 'AM5', memoryType: 'DDR5', formFactor: 'ATX' },
-                { id: 'asrock-b650m', name: 'ASRock B650M-HDV/M.2', specs: 'mATX, DDR5, PCIe 4.0', price: 14000, perf: 72, socket: 'AM5', memoryType: 'DDR5', formFactor: 'mATX' },
-            ],
-            gpu: [
-                { id: 'rtx-4060', name: 'NVIDIA GeForce RTX 4060', specs: '8GB GDDR6, 2460 MHz', price: 32000, perf: 70, tdp: 115 },
-                { id: 'rtx-4070', name: 'NVIDIA GeForce RTX 4070', specs: '12GB GDDR6X, 2475 MHz', price: 55000, perf: 82, tdp: 200 },
-                { id: 'rtx-4070ti', name: 'NVIDIA GeForce RTX 4070 Ti Super', specs: '16GB GDDR6X, 2610 MHz', price: 75000, perf: 88, tdp: 285 },
-                { id: 'rtx-4080', name: 'NVIDIA GeForce RTX 4080 Super', specs: '16GB GDDR6X, 2550 MHz', price: 95000, perf: 94, tdp: 320 },
-                { id: 'rtx-4090', name: 'NVIDIA GeForce RTX 4090', specs: '24GB GDDR6X, 2520 MHz', price: 180000, perf: 100, tdp: 450 },
-                { id: 'rx-7800xt', name: 'AMD Radeon RX 7800 XT', specs: '16GB GDDR6, 2430 MHz', price: 50000, perf: 80, tdp: 263 },
-                { id: 'rx-7900xtx', name: 'AMD Radeon RX 7900 XTX', specs: '24GB GDDR6, 2500 MHz', price: 85000, perf: 92, tdp: 355 },
-            ],
-            ram: [
-                { id: 'ddr4-16gb', name: 'Kingston Fury Beast 16GB DDR4', specs: '3200 MHz, CL16, 2x8GB', price: 5000, perf: 50, memoryType: 'DDR4' },
-                { id: 'ddr4-32gb', name: 'G.Skill Trident Z RGB 32GB DDR4', specs: '3600 MHz, CL16, 2x16GB', price: 12000, perf: 65, memoryType: 'DDR4' },
-                { id: 'ddr5-32gb', name: 'Kingston Fury Beast 32GB DDR5', specs: '5600 MHz, CL40, 2x16GB', price: 15000, perf: 75, memoryType: 'DDR5' },
-                { id: 'ddr5-32gb-pro', name: 'Corsair Dominator Platinum 32GB DDR5', specs: '6000 MHz, CL36, 2x16GB', price: 22000, perf: 85, memoryType: 'DDR5' },
-                { id: 'ddr5-64gb', name: 'G.Skill Trident Z5 RGB 64GB DDR5', specs: '6400 MHz, CL32, 2x32GB', price: 35000, perf: 95, memoryType: 'DDR5' },
-                { id: 'ddr5-128gb', name: 'Crucial Pro 128GB DDR5', specs: '5600 MHz, CL46, 4x32GB', price: 55000, perf: 100, memoryType: 'DDR5' },
-            ],
-            storage: [
-                { id: 'ssd-500gb', name: 'Samsung 980 500GB NVMe SSD', specs: 'PCIe 3.0, 3500/3000 MB/s', price: 5000, perf: 50 },
-                { id: 'ssd-1tb', name: 'Samsung 990 Pro 1TB NVMe SSD', specs: 'PCIe 4.0, 7450/6900 MB/s', price: 12000, perf: 80 },
-                { id: 'ssd-2tb', name: 'WD Black SN850X 2TB NVMe SSD', specs: 'PCIe 4.0, 7300/6600 MB/s', price: 20000, perf: 90 },
-                { id: 'ssd-4tb', name: 'Samsung 990 Pro 4TB NVMe SSD', specs: 'PCIe 4.0, 7450/6900 MB/s', price: 40000, perf: 100 },
-                { id: 'hdd-2tb', name: 'Seagate Barracuda 2TB HDD', specs: '7200 RPM, 256MB Cache', price: 5000, perf: 30 },
-                { id: 'hdd-4tb', name: 'WD Blue 4TB HDD', specs: '5400 RPM, 256MB Cache', price: 8000, perf: 35 },
-            ],
-            cooling: [
-                { id: 'air-basic', name: 'Deepcool GAMMAXX 400', specs: 'Башенный, 4 тепловые трубки', price: 2500, perf: 50, socket: ['LGA1700', 'AM4', 'AM5'], type: 'air', tdpSupport: 180 },
-                { id: 'air-mid', name: 'be quiet! Pure Rock 2', specs: 'Башенный, 150W TDP', price: 4000, perf: 65, socket: ['LGA1700', 'AM4', 'AM5'], type: 'air', tdpSupport: 150 },
-                { id: 'air-pro', name: 'Noctua NH-D15', specs: 'Двухбашенный, 250W TDP', price: 12000, perf: 90, socket: ['LGA1700', 'AM4', 'AM5'], type: 'air', tdpSupport: 250 },
-                { id: 'aio-240', name: 'NZXT Kraken 240', specs: 'AIO 240мм, LCD дисплей', price: 18000, perf: 85, socket: ['LGA1700', 'AM4', 'AM5'], type: 'aio', tdpSupport: 250 },
-                { id: 'aio-280', name: 'Arctic Liquid Freezer II 280', specs: 'AIO 280мм, VRM охлаждение', price: 12000, perf: 88, socket: ['LGA1700', 'AM4', 'AM5'], type: 'aio', tdpSupport: 280 },
-                { id: 'aio-360', name: 'Corsair iCUE H150i Elite', specs: 'AIO 360мм, RGB, 350W TDP', price: 22000, perf: 95, socket: ['LGA1700', 'AM4', 'AM5'], type: 'aio', tdpSupport: 350 },
-                { id: 'aio-420', name: 'ASUS ROG Ryujin III 360', specs: 'AIO 360мм, OLED дисплей', price: 35000, perf: 98, socket: ['LGA1700', 'AM4', 'AM5'], type: 'aio', tdpSupport: 400 },
-            ],
-            psu: [
-                { id: 'psu-550w', name: 'be quiet! Pure Power 12 M 550W', specs: '550W, 80+ Gold, Modular', price: 8000, perf: 55, wattage: 550 },
-                { id: 'psu-650w', name: 'Corsair RM650 650W', specs: '650W, 80+ Gold, Full Modular', price: 10000, perf: 65, wattage: 650 },
-                { id: 'psu-750w', name: 'Corsair RM750x 750W', specs: '750W, 80+ Gold, Full Modular', price: 12000, perf: 75, wattage: 750 },
-                { id: 'psu-850w', name: 'EVGA SuperNOVA 850 G7', specs: '850W, 80+ Gold, Full Modular', price: 15000, perf: 85, wattage: 850 },
-                { id: 'psu-1000w', name: 'Corsair HX1000 1000W', specs: '1000W, 80+ Platinum, Full Modular', price: 22000, perf: 95, wattage: 1000 },
-                { id: 'psu-1200w', name: 'be quiet! Dark Power Pro 13 1200W', specs: '1200W, 80+ Titanium, Full Modular', price: 35000, perf: 100, wattage: 1200 },
-            ],
-            case: [
-                { id: 'case-h5', name: 'NZXT H5 Flow', specs: 'ATX Mid Tower, Mesh панель', price: 10000, perf: 70, formFactor: ['ATX', 'mATX', 'ITX'] },
-                { id: 'case-4000d', name: 'Corsair 4000D Airflow', specs: 'ATX Mid Tower, Отличный airflow', price: 12000, perf: 75, formFactor: ['ATX', 'mATX', 'ITX'] },
-                { id: 'case-lancool', name: 'Lian Li Lancool II Mesh', specs: 'ATX Mid Tower, RGB вентиляторы', price: 14000, perf: 80, formFactor: ['ATX', 'mATX', 'ITX', 'E-ATX'] },
-                { id: 'case-o11', name: 'Lian Li O11 Dynamic EVO', specs: 'ATX Mid Tower, Для кастом СВО', price: 18000, perf: 90, formFactor: ['ATX', 'mATX', 'ITX', 'E-ATX'] },
-                { id: 'case-5000d', name: 'Corsair 5000D Airflow', specs: 'ATX Full Tower, Много места', price: 20000, perf: 92, formFactor: ['ATX', 'mATX', 'ITX', 'E-ATX'] },
-                { id: 'case-north', name: 'Fractal Design North', specs: 'ATX Mid Tower, Премиум дизайн', price: 16000, perf: 85, formFactor: ['ATX', 'mATX', 'ITX'] },
-                { id: 'case-nr200', name: 'Cooler Master NR200P', specs: 'Mini-ITX, Компактный', price: 10000, perf: 72, formFactor: ['ITX'] },
-                { id: 'case-matx', name: 'Thermaltake S100 TG', specs: 'mATX Mini Tower, Стекло', price: 6000, perf: 60, formFactor: ['mATX', 'ITX'] },
-            ],
-        };
+        const CATEGORIES = ['cpu', 'motherboard', 'gpu', 'ram', 'storage', 'cooling', 'psu', 'case'];
 
         const categoryNames = {
+            cpu: 'Процессор',
+            motherboard: 'Мат. плата',
+            gpu: 'Видеокарта',
+            ram: 'Оперативка',
+            storage: 'Накопитель',
+            cooling: 'Охлаждение',
+            psu: 'Блок питания',
+            case: 'Корпус'
+        };
+
+        const categoryNamesFull = {
             cpu: 'Процессор',
             motherboard: 'Материнская плата',
             gpu: 'Видеокарта',
             ram: 'Оперативная память',
-            storage: 'Хранилище',
+            storage: 'Накопитель',
             cooling: 'Охлаждение',
             psu: 'Блок питания',
-            case: 'Корпус',
-        };
-
-        const categoryEmojis = {
-            cpu: '⚙️',
-            motherboard: '🔌',
-            gpu: '🎮',
-            ram: '💾',
-            storage: '📦',
-            cooling: '❄️',
-            psu: '⚡',
-            case: '🏠',
+            case: 'Корпус'
         };
 
         // === STATE ===
+        let components = {};
         let currentConfigIndex = 0;
         let configs = [];
+        let componentsLoaded = false;
 
-        // Создание пустой конфигурации
-        function createEmptyConfig() {
-            return {
-                cpu: null,
-                motherboard: null,
-                gpu: null,
-                ram: null,
-                storage: null,
-                cooling: null,
-                psu: null,
-                case: null,
-            };
+        // === LOAD COMPONENTS FROM JSON ===
+        async function loadComponents() {
+            for (const cat of CATEGORIES) {
+                try {
+                    const response = await fetch(`/data/components/${cat}.json`);
+                    if (response.ok) {
+                        components[cat] = await response.json();
+                    } else {
+                        console.warn(`Failed to load ${cat}.json`);
+                        components[cat] = [];
+                    }
+                } catch (e) {
+                    console.warn(`Error loading ${cat}.json:`, e);
+                    components[cat] = [];
+                }
+            }
+            
+            componentsLoaded = true;
+            initApp();
         }
 
-        // Инициализация конфигураций
+        // === CREATE EMPTY CONFIG ===
+        function createEmptyConfig() {
+            const cfg = {};
+            CATEGORIES.forEach(cat => cfg[cat] = null);
+            return cfg;
+        }
+
+        // === INIT CONFIGS ===
         function initConfigs() {
             const saved = localStorage.getItem('pcConfigurations');
             if (saved) {
@@ -1031,7 +1111,6 @@
                     configs = parsed.configs || [];
                     currentConfigIndex = parsed.currentIndex || 0;
                     
-                    // Восстановление полных объектов компонентов
                     configs = configs.map(cfg => {
                         const restored = createEmptyConfig();
                         Object.keys(cfg).forEach(key => {
@@ -1047,23 +1126,19 @@
                 }
             }
             
-            // Убедимся что есть хотя бы одна конфигурация
             while (configs.length < 1) {
                 configs.push(createEmptyConfig());
             }
             
-            // Ограничение до 10
             if (configs.length > MAX_CONFIGS) {
                 configs = configs.slice(0, MAX_CONFIGS);
             }
         }
 
-        // Получение текущей конфигурации
         function getCurrentConfig() {
             return configs[currentConfigIndex] || createEmptyConfig();
         }
 
-        // Сохранение всех конфигураций
         function saveAllConfigs() {
             const toSave = configs.map(cfg => {
                 const simplified = {};
@@ -1095,93 +1170,78 @@
                 text_color: '#ffffff'
             });
             
-            tg.MainButton.onClick(() => {
-                saveConfig();
-            });
+            tg.MainButton.onClick(() => saveConfig());
         }
 
-        // === COMPATIBILITY SYSTEM ===
+        // === COMPATIBILITY ===
         function checkCompatibility() {
             const config = getCurrentConfig();
             const issues = [];
             const warnings = [];
 
-            // 1. CPU + Материнская плата: проверка сокета
             if (config.cpu && config.motherboard) {
                 if (config.cpu.socket !== config.motherboard.socket) {
                     issues.push({
                         type: 'error',
-                        text: `Сокет процессора (${config.cpu.socket}) не совпадает с сокетом материнской платы (${config.motherboard.socket})`
+                        text: `Сокет CPU (${config.cpu.socket}) ≠ сокет платы (${config.motherboard.socket})`
                     });
                 }
             }
 
-            // 2. RAM + Материнская плата: проверка типа памяти
             if (config.ram && config.motherboard) {
                 if (config.ram.memoryType !== config.motherboard.memoryType) {
                     issues.push({
                         type: 'error',
-                        text: `Тип памяти (${config.ram.memoryType}) не поддерживается материнской платой (${config.motherboard.memoryType})`
+                        text: `Память ${config.ram.memoryType} не подходит к плате (${config.motherboard.memoryType})`
                     });
                 }
             }
 
-            // 3. RAM + CPU: проверка типа памяти (для CPU с ограничением)
             if (config.ram && config.cpu) {
                 const cpuMemTypes = config.cpu.memoryType.split('/');
                 if (!cpuMemTypes.includes(config.ram.memoryType)) {
                     issues.push({
                         type: 'error',
-                        text: `Процессор поддерживает только ${config.cpu.memoryType}, выбрана ${config.ram.memoryType}`
+                        text: `CPU поддерживает ${config.cpu.memoryType}, выбрана ${config.ram.memoryType}`
                     });
                 }
             }
 
-            // 4. Охлаждение + CPU: проверка сокета
             if (config.cooling && config.cpu) {
                 if (!config.cooling.socket.includes(config.cpu.socket)) {
                     issues.push({
                         type: 'error',
-                        text: `Кулер не поддерживает сокет ${config.cpu.socket}`
+                        text: `Кулер не совместим с сокетом ${config.cpu.socket}`
                     });
                 }
-            }
-
-            // 5. Охлаждение + CPU: проверка TDP
-            if (config.cooling && config.cpu) {
                 if (config.cooling.tdpSupport < config.cpu.tdp) {
                     warnings.push({
                         type: 'warning',
-                        text: `Кулер рассчитан на ${config.cooling.tdpSupport}W, процессор потребляет ${config.cpu.tdp}W. Возможен перегрев!`
+                        text: `Кулер (${config.cooling.tdpSupport}W) слабоват для CPU (${config.cpu.tdp}W)`
                     });
                 }
             }
 
-            // 6. Корпус + Материнская плата: проверка форм-фактора
             if (config.case && config.motherboard) {
                 if (!config.case.formFactor.includes(config.motherboard.formFactor)) {
                     issues.push({
                         type: 'error',
-                        text: `Корпус не поддерживает форм-фактор ${config.motherboard.formFactor} (поддерживает: ${config.case.formFactor.join(', ')})`
+                        text: `Корпус не поддерживает ${config.motherboard.formFactor}`
                     });
                 }
             }
 
-            // 7. БП: проверка мощности
             const requiredPower = calculateRequiredPower();
             if (config.psu && requiredPower > 0) {
-                const psuWattage = config.psu.wattage;
-                const powerPercent = (requiredPower / psuWattage) * 100;
-                
-                if (requiredPower > psuWattage) {
+                if (requiredPower > config.psu.wattage) {
                     issues.push({
                         type: 'error',
-                        text: `Мощности БП (${psuWattage}W) недостаточно! Требуется минимум ${Math.ceil(requiredPower * 1.2)}W`
+                        text: `Мощности БП (${config.psu.wattage}W) недостаточно! Нужно ~${Math.ceil(requiredPower * 1.2)}W`
                     });
-                } else if (powerPercent > 80) {
+                } else if ((requiredPower / config.psu.wattage) > 0.8) {
                     warnings.push({
                         type: 'warning',
-                        text: `Нагрузка на БП составит ${Math.round(powerPercent)}%. Рекомендуется оставлять запас 20%`
+                        text: `Нагрузка на БП ~${Math.round((requiredPower / config.psu.wattage) * 100)}%`
                     });
                 }
             }
@@ -1192,13 +1252,9 @@
         function calculateRequiredPower() {
             const config = getCurrentConfig();
             let totalTdp = 0;
-            
             if (config.cpu) totalTdp += config.cpu.tdp;
             if (config.gpu) totalTdp += config.gpu.tdp;
-            
-            // Добавляем ~100W на остальные компоненты
             if (totalTdp > 0) totalTdp += 100;
-            
             return totalTdp;
         }
 
@@ -1209,16 +1265,15 @@
             const list = document.getElementById('compatibilityList');
             
             const allIssues = [...issues, ...warnings];
+            const config = getCurrentConfig();
+            const hasComponents = Object.values(config).some(v => v !== null);
             
             if (allIssues.length === 0) {
-                const config = getCurrentConfig();
-                const hasComponents = Object.values(config).some(v => v !== null);
-                
                 if (hasComponents) {
                     panel.classList.add('visible', 'all-good');
                     panel.classList.remove('has-errors', 'has-warnings');
                     title.className = 'compatibility-title success';
-                    title.innerHTML = '<span>✅</span> Все компоненты совместимы!';
+                    title.innerHTML = `${icons.success} Все компоненты совместимы!`;
                     list.innerHTML = '';
                 } else {
                     panel.classList.remove('visible', 'all-good', 'has-errors', 'has-warnings');
@@ -1233,17 +1288,16 @@
                 panel.classList.add('has-errors');
                 panel.classList.remove('has-warnings');
                 title.className = 'compatibility-title error';
-                title.innerHTML = `<span>❌</span> Обнаружены проблемы (${issues.length})`;
+                title.innerHTML = `${icons.error} Проблемы (${issues.length})`;
             } else {
                 panel.classList.add('has-warnings');
                 panel.classList.remove('has-errors');
                 title.className = 'compatibility-title warning';
-                title.innerHTML = `<span>⚠️</span> Предупреждения (${warnings.length})`;
+                title.innerHTML = `${icons.warning} Предупреждения (${warnings.length})`;
             }
             
             list.innerHTML = allIssues.map(issue => `
                 <div class="compatibility-item">
-                    <span class="compatibility-icon">${issue.type === 'error' ? '❌' : '⚠️'}</span>
                     <span class="compatibility-text">${issue.text}</span>
                 </div>
             `).join('');
@@ -1277,57 +1331,40 @@
             
             switch (category) {
                 case 'motherboard':
-                    // Проверка совместимости с CPU
                     if (config.cpu && comp.socket !== config.cpu.socket) return false;
-                    // Проверка совместимости с RAM
                     if (config.ram && comp.memoryType !== config.ram.memoryType) return false;
-                    // Проверка с корпусом
                     if (config.case && !config.case.formFactor.includes(comp.formFactor)) return false;
                     break;
-                    
                 case 'cpu':
-                    // Проверка совместимости с материнкой
                     if (config.motherboard && comp.socket !== config.motherboard.socket) return false;
-                    // Проверка с RAM
                     if (config.ram) {
                         const memTypes = comp.memoryType.split('/');
                         if (!memTypes.includes(config.ram.memoryType)) return false;
                     }
                     break;
-                    
                 case 'ram':
-                    // Проверка с материнкой
                     if (config.motherboard && comp.memoryType !== config.motherboard.memoryType) return false;
-                    // Проверка с CPU
                     if (config.cpu) {
                         const memTypes = config.cpu.memoryType.split('/');
                         if (!memTypes.includes(comp.memoryType)) return false;
                     }
                     break;
-                    
                 case 'cooling':
-                    // Проверка сокета
                     if (config.cpu && !comp.socket.includes(config.cpu.socket)) return false;
                     break;
-                    
                 case 'case':
-                    // Проверка форм-фактора
                     if (config.motherboard && !comp.formFactor.includes(config.motherboard.formFactor)) return false;
                     break;
             }
-            
             return true;
         }
 
-        // === UI FUNCTIONS ===
+        // === UI ===
         function showToast(message, type = 'success') {
             const toast = document.getElementById('toast');
             toast.textContent = message;
             toast.className = `toast ${type} show`;
-            
-            setTimeout(() => {
-                toast.classList.remove('show');
-            }, 3000);
+            setTimeout(() => toast.classList.remove('show'), 3000);
         }
 
         function renderConfigSlots() {
@@ -1351,37 +1388,65 @@
             document.getElementById('currentConfigNum').textContent = currentConfigIndex + 1;
         }
 
+        function renderCategories() {
+            const grid = document.getElementById('categoriesGrid');
+            const config = getCurrentConfig();
+            const { issues } = checkCompatibility();
+            
+            let html = '';
+            CATEGORIES.forEach(cat => {
+                const isActive = config[cat] !== null;
+                const hasIssue = issues.some(issue => 
+                    issue.text.toLowerCase().includes(categoryNamesFull[cat].toLowerCase()) ||
+                    issue.text.toLowerCase().includes(categoryNames[cat].toLowerCase())
+                );
+                
+                let selectedText = '';
+                if (isActive && config[cat]) {
+                    const name = config[cat].name;
+                    selectedText = name.length > 18 ? name.substring(0, 18) + '...' : name;
+                }
+                
+                html += `
+                    <button class="category-btn ${isActive ? 'active' : ''} ${hasIssue ? 'incompatible' : ''}" 
+                            onclick="openCategory('${cat}')" id="btn-${cat}">
+                        <div class="category-icon">${icons[cat]}</div>
+                        <span class="category-name">${categoryNames[cat]}</span>
+                        ${isActive ? `<span class="category-selected">${selectedText}</span>` : ''}
+                    </button>
+                `;
+            });
+            
+            grid.innerHTML = html;
+        }
+
         function switchConfig(index) {
             if (index < 0 || index >= MAX_CONFIGS) return;
             
-            // Убедимся что конфигурация существует
             while (configs.length <= index) {
                 configs.push(createEmptyConfig());
             }
             
             currentConfigIndex = index;
             saveAllConfigs();
-            renderConfigSlots();
-            updateCategoryButtons();
-            updateBuildSummary();
-            updateCompatibilityPanel();
-            updatePowerIndicator();
-            updateMainButton();
+            updateAll();
             
-            showToast(`📁 Переключено на сборку #${index + 1}`);
-            
-            if (tg) {
-                tg.HapticFeedback.impactOccurred('light');
-            }
+            showToast(`Сборка #${index + 1}`);
+            if (tg) tg.HapticFeedback.impactOccurred('light');
         }
 
         function openCategory(category) {
+            if (!components[category] || components[category].length === 0) {
+                showToast('Компоненты не загружены', 'warning');
+                return;
+            }
+
             const modal = document.getElementById('modal');
             const modalTitle = document.getElementById('modalTitle');
             const componentsList = document.getElementById('componentsList');
             const config = getCurrentConfig();
 
-            modalTitle.textContent = `${categoryEmojis[category]} ${categoryNames[category]}`;
+            modalTitle.innerHTML = `${icons[category]} ${categoryNamesFull[category]}`;
             componentsList.innerHTML = '';
 
             components[category].forEach(comp => {
@@ -1392,14 +1457,13 @@
                 div.className = `component-item ${isSelected ? 'selected' : ''} ${!compatible ? 'incompatible' : ''}`;
                 div.onclick = () => selectComponent(category, comp.id, compatible);
                 
-                // Формируем мета-информацию
                 let metaInfo = '';
                 if (comp.socket) metaInfo += `Сокет: ${comp.socket} `;
-                if (comp.memoryType && !Array.isArray(comp.memoryType)) metaInfo += `| ${comp.memoryType} `;
-                if (comp.formFactor && !Array.isArray(comp.formFactor)) metaInfo += `| ${comp.formFactor} `;
-                if (comp.tdp) metaInfo += `| TDP: ${comp.tdp}W `;
-                if (comp.wattage) metaInfo += `| ${comp.wattage}W `;
-                if (comp.tdpSupport) metaInfo += `| До ${comp.tdpSupport}W TDP `;
+                if (comp.memoryType && !Array.isArray(comp.memoryType)) metaInfo += `• ${comp.memoryType} `;
+                if (comp.formFactor && !Array.isArray(comp.formFactor)) metaInfo += `• ${comp.formFactor} `;
+                if (comp.tdp) metaInfo += `• TDP: ${comp.tdp}W `;
+                if (comp.wattage) metaInfo += `• ${comp.wattage}W `;
+                if (comp.tdpSupport) metaInfo += `• До ${comp.tdpSupport}W `;
                 
                 div.innerHTML = `
                     <div class="component-info">
@@ -1408,16 +1472,13 @@
                         ${metaInfo ? `<div class="component-meta">${metaInfo.trim()}</div>` : ''}
                     </div>
                     <div class="component-price">${comp.price.toLocaleString('ru-RU')} ₽</div>
-                    ${isSelected ? '<div class="checkmark">✓</div>' : ''}
+                    ${isSelected ? `<div class="checkmark">${icons.check}</div>` : ''}
                 `;
                 componentsList.appendChild(div);
             });
 
             modal.classList.add('active');
-            
-            if (tg) {
-                tg.HapticFeedback.impactOccurred('light');
-            }
+            if (tg) tg.HapticFeedback.impactOccurred('light');
         }
 
         function closeModal() {
@@ -1428,63 +1489,26 @@
             const comp = components[category].find(c => c.id === componentId);
             
             if (!compatible) {
-                showToast('⚠️ Этот компонент несовместим с текущей сборкой', 'warning');
-                if (tg) {
-                    tg.HapticFeedback.notificationOccurred('error');
-                }
-                // Все равно добавляем, но предупреждаем
+                showToast('Компонент несовместим', 'warning');
+                if (tg) tg.HapticFeedback.notificationOccurred('error');
             }
             
             configs[currentConfigIndex][category] = comp;
             
-            updateCategoryButtons();
-            updateBuildSummary();
-            updateCompatibilityPanel();
-            updatePowerIndicator();
             closeModal();
             saveAllConfigs();
+            updateAll();
             
-            showToast(`${categoryEmojis[category]} ${comp.name} добавлен!`);
-            
-            if (tg) {
-                tg.HapticFeedback.notificationOccurred('success');
-            }
-            
-            updateMainButton();
-        }
-
-        function updateCategoryButtons() {
-            const config = getCurrentConfig();
-            const { issues } = checkCompatibility();
-            
-            document.querySelectorAll('.category-btn').forEach(btn => {
-                const cat = btn.id.replace('btn-', '');
-                btn.classList.remove('active', 'incompatible');
-                
-                if (config[cat]) {
-                    btn.classList.add('active');
-                    
-                    // Проверяем есть ли проблемы связанные с этой категорией
-                    const hasIssue = issues.some(issue => 
-                        issue.text.toLowerCase().includes(categoryNames[cat].toLowerCase())
-                    );
-                    if (hasIssue) {
-                        btn.classList.add('incompatible');
-                    }
-                }
-            });
+            showToast(`${comp.name} добавлен!`);
+            if (tg) tg.HapticFeedback.notificationOccurred('success');
         }
 
         function updateMainButton() {
             if (!tg) return;
-            
             const config = getCurrentConfig();
             const count = Object.values(config).filter(v => v !== null).length;
-            if (count > 0) {
-                tg.MainButton.show();
-            } else {
-                tg.MainButton.hide();
-            }
+            if (count > 0) tg.MainButton.show();
+            else tg.MainButton.hide();
         }
 
         function updateBuildSummary() {
@@ -1492,29 +1516,30 @@
             const summaryContent = document.getElementById('buildSummaryContent');
             let html = '';
             let totalPrice = 0;
-            let perfScore = 0;
             let count = 0;
 
-            Object.keys(config).forEach(key => {
+            CATEGORIES.forEach(key => {
                 if (config[key]) {
                     html += `
                         <div class="build-item">
-                            <span class="build-item-label">${categoryEmojis[key]} ${categoryNames[key]}</span>
-                            <span class="build-item-value">${config[key].name}</span>
+                            <div class="build-item-left">
+                                <div class="build-item-icon">${icons[key]}</div>
+                                <div class="build-item-info">
+                                    <div class="build-item-label">${categoryNamesFull[key]}</div>
+                                    <div class="build-item-value">${config[key].name}</div>
+                                </div>
+                            </div>
                             <span class="build-item-price">${config[key].price.toLocaleString('ru-RU')} ₽</span>
                         </div>
                     `;
                     totalPrice += config[key].price;
-                    perfScore += config[key].perf;
                     count++;
                 }
             });
 
             if (count === 0) {
-                html = '<div style="color: var(--color-text-secondary); text-align: center; padding: 20px;">Выбери компоненты чтобы увидеть сборку</div>';
-                perfScore = 0;
+                html = '<div class="build-empty">Выбери компоненты чтобы увидеть сборку</div>';
             } else {
-                perfScore = Math.round(perfScore / count);
                 html += `
                     <div class="build-total">
                         <span class="build-total-label">Итого:</span>
@@ -1526,81 +1551,86 @@
             summaryContent.innerHTML = html;
             document.getElementById('componentCount').textContent = `${count}/${TOTAL_COMPONENTS}`;
             document.getElementById('totalPrice').textContent = totalPrice > 0 ? `${totalPrice.toLocaleString('ru-RU')} ₽` : '0 ₽';
-            document.getElementById('perfScore').textContent = `${perfScore}%`;
         }
 
-        function shareConfig() {
+        function getBuildText() {
             const config = getCurrentConfig();
+            const { issues } = checkCompatibility();
             let count = Object.values(config).filter(v => v !== null).length;
-            if (count === 0) {
-                showToast('⚠️ Сначала выбери компоненты!', 'warning');
-                return;
-            }
-
-            const { issues, warnings } = checkCompatibility();
             
-            let configText = `🖥️ Мой конфиг ПК #${currentConfigIndex + 1}:\n\n`;
-            let totalPrice = 0;
-            let perfScore = 0;
+            if (count === 0) return null;
 
-            Object.keys(config).forEach(key => {
+            let text = `━━━━━━━━━━━━━━━━━━━━\n`;
+            text += `🖥 СБОРКА ПК #${currentConfigIndex + 1}\n`;
+            text += `━━━━━━━━━━━━━━━━━━━━\n\n`;
+            
+            let totalPrice = 0;
+            const emojis = {
+                cpu: '⚙️', motherboard: '🔧', gpu: '🎮', ram: '💾',
+                storage: '📁', cooling: '❄️', psu: '⚡', case: '📦'
+            };
+            
+            CATEGORIES.forEach(key => {
                 if (config[key]) {
-                    configText += `${categoryEmojis[key]} ${categoryNames[key]}: ${config[key].name} — ${config[key].price.toLocaleString('ru-RU')} ₽\n`;
+                    text += `${emojis[key]} ${categoryNamesFull[key]}:\n`;
+                    text += `   ${config[key].name}\n`;
+                    text += `   └ ${config[key].price.toLocaleString('ru-RU')} ₽\n\n`;
                     totalPrice += config[key].price;
-                    perfScore += config[key].perf;
                 }
             });
 
-            perfScore = Math.round(perfScore / count);
-            configText += `\n💰 Итого: ${totalPrice.toLocaleString('ru-RU')} ₽`;
-            configText += `\n📊 Производительность: ${perfScore}%`;
+            text += `━━━━━━━━━━━━━━━━━━━━\n`;
+            text += `💰 ИТОГО: ${totalPrice.toLocaleString('ru-RU')} ₽\n`;
             
             if (issues.length > 0) {
-                configText += `\n⚠️ Внимание: есть проблемы совместимости!`;
-            } else if (warnings.length > 0) {
-                configText += `\n⚡ Есть предупреждения`;
+                text += `⚠️ Есть проблемы совместимости\n`;
             } else {
-                configText += `\n✅ Все компоненты совместимы`;
+                text += `✅ Все компоненты совместимы\n`;
             }
             
-            configText += `\n\n🔗 Собрано в ПК Конфигураторе`;
+            text += `━━━━━━━━━━━━━━━━━━━━\n`;
+            text += `📱 Собрано в ПК Конфигураторе`;
 
-            if (navigator.share) {
-                navigator.share({
-                    title: 'ПК Конфигуратор',
-                    text: configText,
-                }).catch(() => {
-                    copyToClipboard(configText);
-                });
-            } else {
-                copyToClipboard(configText);
-            }
+            return text;
         }
 
-        function copyToClipboard(text) {
+        function copyBuildToClipboard() {
+            const text = getBuildText();
+            if (!text) {
+                showToast('Сначала выбери компоненты', 'warning');
+                return;
+            }
+
             navigator.clipboard.writeText(text).then(() => {
-                showToast('📋 Скопировано в буфер обмена!');
+                showToast('Сборка скопирована!');
+                if (tg) tg.HapticFeedback.notificationOccurred('success');
             }).catch(() => {
-                showToast('❌ Не удалось скопировать', 'warning');
+                showToast('Не удалось скопировать', 'error');
             });
+        }
+
+        function shareConfig() {
+            const text = getBuildText();
+            if (!text) {
+                showToast('Сначала выбери компоненты', 'warning');
+                return;
+            }
+
+            if (navigator.share) {
+                navigator.share({ title: 'ПК Конфигуратор', text }).catch(() => {
+                    copyBuildToClipboard();
+                });
+            } else {
+                copyBuildToClipboard();
+            }
         }
 
         function resetConfig() {
             configs[currentConfigIndex] = createEmptyConfig();
-            
-            updateCategoryButtons();
-            updateBuildSummary();
-            updateCompatibilityPanel();
-            updatePowerIndicator();
-            updateMainButton();
             saveAllConfigs();
-            renderConfigSlots();
-            
-            showToast('🔄 Конфигурация сброшена');
-            
-            if (tg) {
-                tg.HapticFeedback.notificationOccurred('warning');
-            }
+            updateAll();
+            showToast('Сборка сброшена');
+            if (tg) tg.HapticFeedback.notificationOccurred('warning');
         }
 
         function deleteCurrentConfig() {
@@ -1610,24 +1640,14 @@
             }
             
             configs.splice(currentConfigIndex, 1);
-            
             if (currentConfigIndex >= configs.length) {
                 currentConfigIndex = configs.length - 1;
             }
             
             saveAllConfigs();
-            renderConfigSlots();
-            updateCategoryButtons();
-            updateBuildSummary();
-            updateCompatibilityPanel();
-            updatePowerIndicator();
-            updateMainButton();
-            
-            showToast('🗑️ Сборка удалена');
-            
-            if (tg) {
-                tg.HapticFeedback.notificationOccurred('warning');
-            }
+            updateAll();
+            showToast('Сборка удалена');
+            if (tg) tg.HapticFeedback.notificationOccurred('warning');
         }
 
         function saveConfig() {
@@ -1635,91 +1655,84 @@
             let count = Object.values(config).filter(v => v !== null).length;
             
             if (count === 0) {
-                showToast('⚠️ Сначала выбери компоненты!', 'warning');
+                showToast('Сначала выбери компоненты', 'warning');
                 return;
             }
 
             const { issues } = checkCompatibility();
-            if (issues.length > 0) {
-                showToast('⚠️ Есть проблемы совместимости! Проверь сборку', 'warning');
-            }
 
-            // Prepare data for backend
             const configData = {
                 configNumber: currentConfigIndex + 1,
                 components: {},
                 totalPrice: 0,
-                perfScore: 0,
                 timestamp: new Date().toISOString(),
-                compatibility: issues.length === 0 ? 'OK' : 'HAS_ISSUES'
+                compatibility: issues.length === 0 ? 'OK' : 'HAS_ISSUES',
+                buildText: getBuildText()
             };
 
-            Object.keys(config).forEach(key => {
+            let perfScore = 0;
+            CATEGORIES.forEach(key => {
                 if (config[key]) {
                     configData.components[key] = {
                         id: config[key].id,
                         name: config[key].name,
-                        price: config[key].price
+                        price: config[key].price,
+                        specs: config[key].specs
                     };
                     configData.totalPrice += config[key].price;
-                    configData.perfScore += config[key].perf;
+                    perfScore += config[key].perf || 0;
                 }
             });
+            configData.perfScore = Math.round(perfScore / count);
 
-            configData.perfScore = Math.round(configData.perfScore / count);
-
-            // If in Telegram, send data to bot
             if (tg) {
                 tg.sendData(JSON.stringify(configData));
             } else {
-                // Save to localStorage for web version
                 const builds = JSON.parse(localStorage.getItem('pcBuilds') || '[]');
                 configData.savedAt = new Date().toISOString();
                 builds.push(configData);
                 localStorage.setItem('pcBuilds', JSON.stringify(builds));
-                showToast('💾 Сборка сохранена!');
                 
-                // Also try to send to backend
                 fetch('/api/save-build', {
                     method: 'POST',
-                    headers: {
-                        'Content-Type': 'application/json',
-                    },
-                    body: JSON.stringify(configData),
-                }).then(response => response.json())
-                  .then(data => {
-                      console.log('Build saved:', data);
-                  })
-                  .catch(error => {
-                      console.log('Backend not available, saved locally');
-                  });
+                    headers: { 'Content-Type': 'application/json' },
+                    body: JSON.stringify(configData)
+                }).then(r => r.json()).then(data => {
+                    showToast('Сборка сохранена!');
+                }).catch(() => {
+                    showToast('Сохранено локально');
+                });
             }
             
             saveAllConfigs();
             renderConfigSlots();
         }
 
+        function updateAll() {
+            renderConfigSlots();
+            renderCategories();
+            updateBuildSummary();
+            updateCompatibilityPanel();
+            updatePowerIndicator();
+            updateMainButton();
+        }
+
+        function initApp() {
+            initConfigs();
+            updateAll();
+        }
+
         // === EVENT LISTENERS ===
         document.addEventListener('keydown', (e) => {
-            if (e.key === 'Escape') {
-                closeModal();
-            }
+            if (e.key === 'Escape') closeModal();
         });
 
         document.getElementById('modal').addEventListener('click', (e) => {
-            if (e.target.id === 'modal') {
-                closeModal();
-            }
+            if (e.target.id === 'modal') closeModal();
         });
 
-        // === INITIALIZATION ===
-        initConfigs();
-        renderConfigSlots();
-        updateCategoryButtons();
-        updateBuildSummary();
-        updateCompatibilityPanel();
-        updatePowerIndicator();
-        updateMainButton();
+        // === START ===
+        loadComponents();
     </script>
 </body>
 </html>
