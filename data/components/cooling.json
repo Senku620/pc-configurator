@@ -1,0 +1,92 @@
+[
+    {
+        "id": "air-basic",
+        "name": "Deepcool GAMMAXX 400",
+        "specs": "Башенный, 4 тепловые трубки",
+        "price": 2500,
+        "perf": 50,
+        "socket": ["LGA1700", "AM4", "AM5"],
+        "type": "air",
+        "tdpSupport": 180
+    },
+    {
+        "id": "air-mid",
+        "name": "be quiet! Pure Rock 2",
+        "specs": "Башенный, 150W TDP",
+        "price": 4000,
+        "perf": 65,
+        "socket": ["LGA1700", "AM4", "AM5"],
+        "type": "air",
+        "tdpSupport": 150
+    },
+    {
+        "id": "air-pro",
+        "name": "Noctua NH-D15",
+        "specs": "Двухбашенный, 250W TDP",
+        "price": 12000,
+        "perf": 90,
+        "socket": ["LGA1700", "AM4", "AM5"],
+        "type": "air",
+        "tdpSupport": 250
+    },
+    {
+        "id": "aio-240",
+        "name": "NZXT Kraken 240",
+        "specs": "AIO 240мм, LCD дисплей",
+        "price": 18000,
+        "perf": 85,
+        "socket": ["LGA1700", "AM4", "AM5"],
+        "type": "aio",
+        "tdpSupport": 250
+    },
+    {
+        "id": "aio-280",
+        "name": "Arctic Liquid Freezer II 280",
+        "specs": "AIO 280мм, VRM охлаждение",
+        "price": 12000,
+        "perf": 88,
+        "socket": ["LGA1700", "AM4", "AM5"],
+        "type": "aio",
+        "tdpSupport": 280
+    },
+    {
+        "id": "aio-360",
+        "name": "Corsair iCUE H150i Elite",
+        "specs": "AIO 360мм, RGB, 350W TDP",
+        "price": 22000,
+        "perf": 95,
+        "socket": ["LGA1700", "AM4", "AM5"],
+        "type": "aio",
+        "tdpSupport": 350
+    },
+    {
+        "id": "aio-420",
+        "name": "ASUS ROG Ryujin III 360",
+        "specs": "AIO 360мм, OLED дисплей",
+        "price": 35000,
+        "perf": 98,
+        "socket": ["LGA1700", "AM4", "AM5"],
+        "type": "aio",
+        "tdpSupport": 400
+    },
+    {
+        "id": "air-budget",
+        "name": "ID-Cooling SE-214-XT",
+        "specs": "Башенный, 4 тепловые трубки",
+        "price": 1800,
+        "perf": 45,
+        "socket": ["LGA1700", "AM4", "AM5"],
+        "type": "air",
+        "tdpSupport": 150
+    },
+    {
+        "id": "air-thermalright",
+        "name": "Thermalright Peerless Assassin 120",
+        "specs": "Двухбашенный, 6 трубок",
+        "price": 5500,
+        "perf": 85,
+        "socket": ["LGA1700", "AM4", "AM5"],
+        "type": "air",
+        "tdpSupport": 260
+    }
+]

@@ -1,0 +1,58 @@
+[
+    {
+        "id": "ssd-500gb",
+        "name": "Samsung 980 500GB NVMe SSD",
+        "specs": "PCIe 3.0, 3500/3000 MB/s",
+        "price": 5000,
+        "perf": 50
+    },
+    {
+        "id": "ssd-1tb",
+        "name": "Samsung 990 Pro 1TB NVMe SSD",
+        "specs": "PCIe 4.0, 7450/6900 MB/s",
+        "price": 12000,
+        "perf": 80
+    },
+    {
+        "id": "ssd-2tb",
+        "name": "WD Black SN850X 2TB NVMe SSD",
+        "specs": "PCIe 4.0, 7300/6600 MB/s",
+        "price": 20000,
+        "perf": 90
+    },
+    {
+        "id": "ssd-4tb",
+        "name": "Samsung 990 Pro 4TB NVMe SSD",
+        "specs": "PCIe 4.0, 7450/6900 MB/s",
+        "price": 40000,
+        "perf": 100
+    },
+    {
+        "id": "hdd-2tb",
+        "name": "Seagate Barracuda 2TB HDD",
+        "specs": "7200 RPM, 256MB Cache",
+        "price": 5000,
+        "perf": 30
+    },
+    {
+        "id": "hdd-4tb",
+        "name": "WD Blue 4TB HDD",
+        "specs": "5400 RPM, 256MB Cache",
+        "price": 8000,
+        "perf": 35
+    },
+    {
+        "id": "ssd-1tb-budget",
+        "name": "Kingston NV2 1TB NVMe SSD",
+        "specs": "PCIe 4.0, 3500/2100 MB/s",
+        "price": 6000,
+        "perf": 60
+    },
+    {
+        "id": "ssd-pcie5",
+        "name": "Crucial T700 1TB NVMe SSD",
+        "specs": "PCIe 5.0, 11700/9500 MB/s",
+        "price": 25000,
+        "perf": 95
+    }
+]

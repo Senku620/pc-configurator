@@ -1,0 +1,66 @@
+[
+    {
+        "id": "ddr4-16gb",
+        "name": "Kingston Fury Beast 16GB DDR4",
+        "specs": "3200 MHz, CL16, 2x8GB",
+        "price": 5000,
+        "perf": 50,
+        "memoryType": "DDR4"
+    },
+    {
+        "id": "ddr4-32gb",
+        "name": "G.Skill Trident Z RGB 32GB DDR4",
+        "specs": "3600 MHz, CL16, 2x16GB",
+        "price": 12000,
+        "perf": 65,
+        "memoryType": "DDR4"
+    },
+    {
+        "id": "ddr5-32gb",
+        "name": "Kingston Fury Beast 32GB DDR5",
+        "specs": "5600 MHz, CL40, 2x16GB",
+        "price": 15000,
+        "perf": 75,
+        "memoryType": "DDR5"
+    },
+    {
+        "id": "ddr5-32gb-pro",
+        "name": "Corsair Dominator Platinum 32GB DDR5",
+        "specs": "6000 MHz, CL36, 2x16GB",
+        "price": 22000,
+        "perf": 85,
+        "memoryType": "DDR5"
+    },
+    {
+        "id": "ddr5-64gb",
+        "name": "G.Skill Trident Z5 RGB 64GB DDR5",
+        "specs": "6400 MHz, CL32, 2x32GB",
+        "price": 35000,
+        "perf": 95,
+        "memoryType": "DDR5"
+    },
+    {
+        "id": "ddr5-128gb",
+        "name": "Crucial Pro 128GB DDR5",
+        "specs": "5600 MHz, CL46, 4x32GB",
+        "price": 55000,
+        "perf": 100,
+        "memoryType": "DDR5"
+    },
+    {
+        "id": "ddr4-64gb",
+        "name": "Corsair Vengeance LPX 64GB DDR4",
+        "specs": "3200 MHz, CL16, 4x16GB",
+        "price": 18000,
+        "perf": 70,
+        "memoryType": "DDR4"
+    },
+    {
+        "id": "ddr5-48gb",
+        "name": "TeamGroup T-Force Delta 48GB DDR5",
+        "specs": "6000 MHz, CL38, 2x24GB",
+        "price": 20000,
+        "perf": 80,
+        "memoryType": "DDR5"
+    }
+]

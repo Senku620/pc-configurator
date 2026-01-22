@@ -1,0 +1,82 @@
+[
+    {
+        "id": "rtx-4060",
+        "name": "NVIDIA GeForce RTX 4060",
+        "specs": "8GB GDDR6, 2460 MHz",
+        "price": 32000,
+        "perf": 70,
+        "tdp": 115
+    },
+    {
+        "id": "rtx-4070",
+        "name": "NVIDIA GeForce RTX 4070",
+        "specs": "12GB GDDR6X, 2475 MHz",
+        "price": 55000,
+        "perf": 82,
+        "tdp": 200
+    },
+    {
+        "id": "rtx-4070ti",
+        "name": "NVIDIA GeForce RTX 4070 Ti Super",
+        "specs": "16GB GDDR6X, 2610 MHz",
+        "price": 75000,
+        "perf": 88,
+        "tdp": 285
+    },
+    {
+        "id": "rtx-4080",
+        "name": "NVIDIA GeForce RTX 4080 Super",
+        "specs": "16GB GDDR6X, 2550 MHz",
+        "price": 95000,
+        "perf": 94,
+        "tdp": 320
+    },
+    {
+        "id": "rtx-4090",
+        "name": "NVIDIA GeForce RTX 4090",
+        "specs": "24GB GDDR6X, 2520 MHz",
+        "price": 180000,
+        "perf": 100,
+        "tdp": 450
+    },
+    {
+        "id": "rx-7800xt",
+        "name": "AMD Radeon RX 7800 XT",
+        "specs": "16GB GDDR6, 2430 MHz",
+        "price": 50000,
+        "perf": 80,
+        "tdp": 263
+    },
+    {
+        "id": "rx-7900xtx",
+        "name": "AMD Radeon RX 7900 XTX",
+        "specs": "24GB GDDR6, 2500 MHz",
+        "price": 85000,
+        "perf": 92,
+        "tdp": 355
+    },
+    {
+        "id": "rtx-4060ti",
+        "name": "NVIDIA GeForce RTX 4060 Ti",
+        "specs": "8GB GDDR6, 2535 MHz",
+        "price": 42000,
+        "perf": 75,
+        "tdp": 160
+    },
+    {
+        "id": "rx-7600",
+        "name": "AMD Radeon RX 7600",
+        "specs": "8GB GDDR6, 2655 MHz",
+        "price": 28000,
+        "perf": 65,
+        "tdp": 165
+    },
+    {
+        "id": "arc-b580",
+        "name": "Intel Arc B580",
+        "specs": "12GB GDDR6, 2670 MHz",
+        "price": 30000,
+        "perf": 68,
+        "tdp": 190
+    }
+]

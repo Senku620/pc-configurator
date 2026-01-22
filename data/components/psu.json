@@ -1,0 +1,66 @@
+[
+    {
+        "id": "psu-550w",
+        "name": "be quiet! Pure Power 12 M 550W",
+        "specs": "550W, 80+ Gold, Modular",
+        "price": 8000,
+        "perf": 55,
+        "wattage": 550
+    },
+    {
+        "id": "psu-650w",
+        "name": "Corsair RM650 650W",
+        "specs": "650W, 80+ Gold, Full Modular",
+        "price": 10000,
+        "perf": 65,
+        "wattage": 650
+    },
+    {
+        "id": "psu-750w",
+        "name": "Corsair RM750x 750W",
+        "specs": "750W, 80+ Gold, Full Modular",
+        "price": 12000,
+        "perf": 75,
+        "wattage": 750
+    },
+    {
+        "id": "psu-850w",
+        "name": "EVGA SuperNOVA 850 G7",
+        "specs": "850W, 80+ Gold, Full Modular",
+        "price": 15000,
+        "perf": 85,
+        "wattage": 850
+    },
+    {
+        "id": "psu-1000w",
+        "name": "Corsair HX1000 1000W",
+        "specs": "1000W, 80+ Platinum, Full Modular",
+        "price": 22000,
+        "perf": 95,
+        "wattage": 1000
+    },
+    {
+        "id": "psu-1200w",
+        "name": "be quiet! Dark Power Pro 13 1200W",
+        "specs": "1200W, 80+ Titanium, Full Modular",
+        "price": 35000,
+        "perf": 100,
+        "wattage": 1200
+    },
+    {
+        "id": "psu-500w",
+        "name": "Deepcool PK500D",
+        "specs": "500W, 80+ Bronze",
+        "price": 4500,
+        "perf": 45,
+        "wattage": 500
+    },
+    {
+        "id": "psu-850w-seasonic",
+        "name": "Seasonic Focus GX-850",
+        "specs": "850W, 80+ Gold, Full Modular",
+        "price": 14000,
+        "perf": 88,
+        "wattage": 850
+    }
+]

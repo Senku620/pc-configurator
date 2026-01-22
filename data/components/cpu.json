@@ -1,0 +1,82 @@
+[
+    {
+        "id": "intel-i5-13600k",
+        "name": "Intel Core i5-13600K",
+        "specs": "14 ядер, 3.5-5.1 GHz",
+        "price": 25000,
+        "perf": 85,
+        "socket": "LGA1700",
+        "tdp": 125,
+        "memoryType": "DDR4/DDR5"
+    },
+    {
+        "id": "intel-i7-13700k",
+        "name": "Intel Core i7-13700K",
+        "specs": "16 ядер, 3.4-5.4 GHz",
+        "price": 35000,
+        "perf": 95,
+        "socket": "LGA1700",
+        "tdp": 125,
+        "memoryType": "DDR4/DDR5"
+    },
+    {
+        "id": "intel-i9-14900k",
+        "name": "Intel Core i9-14900K",
+        "specs": "24 ядра, 3.2-6.0 GHz",
+        "price": 55000,
+        "perf": 100,
+        "socket": "LGA1700",
+        "tdp": 253,
+        "memoryType": "DDR4/DDR5"
+    },
+    {
+        "id": "amd-5800x3d",
+        "name": "AMD Ryzen 7 5800X3D",
+        "specs": "8 ядер, 96MB 3D V-Cache",
+        "price": 28000,
+        "perf": 90,
+        "socket": "AM4",
+        "tdp": 105,
+        "memoryType": "DDR4"
+    },
+    {
+        "id": "amd-7700x",
+        "name": "AMD Ryzen 7 7700X",
+        "specs": "8 ядер, 4.5-5.4 GHz",
+        "price": 30000,
+        "perf": 92,
+        "socket": "AM5",
+        "tdp": 105,
+        "memoryType": "DDR5"
+    },
+    {
+        "id": "amd-7950x3d",
+        "name": "AMD Ryzen 9 7950X3D",
+        "specs": "16 ядер, 128MB 3D V-Cache",
+        "price": 60000,
+        "perf": 99,
+        "socket": "AM5",
+        "tdp": 120,
+        "memoryType": "DDR5"
+    },
+    {
+        "id": "intel-i5-12400f",
+        "name": "Intel Core i5-12400F",
+        "specs": "6 ядер, 2.5-4.4 GHz",
+        "price": 12000,
+        "perf": 70,
+        "socket": "LGA1700",
+        "tdp": 65,
+        "memoryType": "DDR4/DDR5"
+    },
+    {
+        "id": "amd-5600x",
+        "name": "AMD Ryzen 5 5600X",
+        "specs": "6 ядер, 3.7-4.6 GHz",
+        "price": 14000,
+        "perf": 75,
+        "socket": "AM4",
+        "tdp": 65,
+        "memoryType": "DDR4"
+    }
+]

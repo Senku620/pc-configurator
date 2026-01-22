@@ -1,0 +1,92 @@
+[
+    {
+        "id": "asus-z790",
+        "name": "ASUS ROG Strix Z790-E",
+        "specs": "ATX, DDR5, PCIe 5.0",
+        "price": 45000,
+        "perf": 95,
+        "socket": "LGA1700",
+        "memoryType": "DDR5",
+        "formFactor": "ATX"
+    },
+    {
+        "id": "msi-z790",
+        "name": "MSI MAG Z790 Tomahawk",
+        "specs": "ATX, DDR5, Wi-Fi 6E",
+        "price": 32000,
+        "perf": 90,
+        "socket": "LGA1700",
+        "memoryType": "DDR5",
+        "formFactor": "ATX"
+    },
+    {
+        "id": "gigabyte-b660",
+        "name": "Gigabyte B660M DS3H",
+        "specs": "mATX, DDR4, PCIe 4.0",
+        "price": 12000,
+        "perf": 70,
+        "socket": "LGA1700",
+        "memoryType": "DDR4",
+        "formFactor": "mATX"
+    },
+    {
+        "id": "asus-b550",
+        "name": "ASUS TUF Gaming B550-PLUS",
+        "specs": "ATX, DDR4, PCIe 4.0",
+        "price": 15000,
+        "perf": 75,
+        "socket": "AM4",
+        "memoryType": "DDR4",
+        "formFactor": "ATX"
+    },
+    {
+        "id": "msi-b550",
+        "name": "MSI MAG B550 Tomahawk",
+        "specs": "ATX, DDR4, 2.5G LAN",
+        "price": 18000,
+        "perf": 78,
+        "socket": "AM4",
+        "memoryType": "DDR4",
+        "formFactor": "ATX"
+    },
+    {
+        "id": "asus-x670e",
+        "name": "ASUS ROG Crosshair X670E",
+        "specs": "ATX, DDR5, PCIe 5.0",
+        "price": 55000,
+        "perf": 98,
+        "socket": "AM5",
+        "memoryType": "DDR5",
+        "formFactor": "ATX"
+    },
+    {
+        "id": "msi-b650",
+        "name": "MSI MAG B650 Tomahawk",
+        "specs": "ATX, DDR5, Wi-Fi 6E",
+        "price": 25000,
+        "perf": 85,
+        "socket": "AM5",
+        "memoryType": "DDR5",
+        "formFactor": "ATX"
+    },
+    {
+        "id": "asrock-b650m",
+        "name": "ASRock B650M-HDV/M.2",
+        "specs": "mATX, DDR5, PCIe 4.0",
+        "price": 14000,
+        "perf": 72,
+        "socket": "AM5",
+        "memoryType": "DDR5",
+        "formFactor": "mATX"
+    },
+    {
+        "id": "gigabyte-b760m",
+        "name": "Gigabyte B760M AORUS Elite",
+        "specs": "mATX, DDR5, PCIe 4.0",
+        "price": 18000,
+        "perf": 80,
+        "socket": "LGA1700",
+        "memoryType": "DDR5",
+        "formFactor": "mATX"
+    }
+]

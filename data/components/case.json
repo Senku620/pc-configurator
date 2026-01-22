@@ -1,0 +1,82 @@
+[
+    {
+        "id": "case-h5",
+        "name": "NZXT H5 Flow",
+        "specs": "ATX Mid Tower, Mesh панель",
+        "price": 10000,
+        "perf": 70,
+        "formFactor": ["ATX", "mATX", "ITX"]
+    },
+    {
+        "id": "case-4000d",
+        "name": "Corsair 4000D Airflow",
+        "specs": "ATX Mid Tower, Отличный airflow",
+        "price": 12000,
+        "perf": 75,
+        "formFactor": ["ATX", "mATX", "ITX"]
+    },
+    {
+        "id": "case-lancool",
+        "name": "Lian Li Lancool II Mesh",
+        "specs": "ATX Mid Tower, RGB вентиляторы",
+        "price": 14000,
+        "perf": 80,
+        "formFactor": ["ATX", "mATX", "ITX", "E-ATX"]
+    },
+    {
+        "id": "case-o11",
+        "name": "Lian Li O11 Dynamic EVO",
+        "specs": "ATX Mid Tower, Для кастом СВО",
+        "price": 18000,
+        "perf": 90,
+        "formFactor": ["ATX", "mATX", "ITX", "E-ATX"]
+    },
+    {
+        "id": "case-5000d",
+        "name": "Corsair 5000D Airflow",
+        "specs": "ATX Full Tower, Много места",
+        "price": 20000,
+        "perf": 92,
+        "formFactor": ["ATX", "mATX", "ITX", "E-ATX"]
+    },
+    {
+        "id": "case-north",
+        "name": "Fractal Design North",
+        "specs": "ATX Mid Tower, Премиум дизайн",
+        "price": 16000,
+        "perf": 85,
+        "formFactor": ["ATX", "mATX", "ITX"]
+    },
+    {
+        "id": "case-nr200",
+        "name": "Cooler Master NR200P",
+        "specs": "Mini-ITX, Компактный",
+        "price": 10000,
+        "perf": 72,
+        "formFactor": ["ITX"]
+    },
+    {
+        "id": "case-matx",
+        "name": "Thermaltake S100 TG",
+        "specs": "mATX Mini Tower, Стекло",
+        "price": 6000,
+        "perf": 60,
+        "formFactor": ["mATX", "ITX"]
+    },
+    {
+        "id": "case-pop-air",
+        "name": "Fractal Design Pop Air",
+        "specs": "ATX Mid Tower, Mesh, RGB",
+        "price": 9000,
+        "perf": 72,
+        "formFactor": ["ATX", "mATX", "ITX"]
+    },
+    {
+        "id": "case-h7",
+        "name": "NZXT H7 Flow",
+        "specs": "ATX Mid Tower, Премиум",
+        "price": 15000,
+        "perf": 82,
+        "formFactor": ["ATX", "mATX", "ITX", "E-ATX"]
+    }
+]
